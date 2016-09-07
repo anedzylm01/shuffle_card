@@ -7,6 +7,7 @@
     for ($i = 0; $i < 52; $i++) { 
         array_push($cards, $i);
     }
+
     //show original cards set
     echo "Original cards set:\n";
     show_card($cards);
