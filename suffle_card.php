@@ -14,7 +14,7 @@
 
     //shuffle cards set
     for ($i = 0; $i < $swap_times; $i++) { 
-        $time=(int)time();
+        $time = (int)time();
         swap_card($cards, base_convert($time * $i, 10, 8) % 52, $time * $i % 52);
     }
 
