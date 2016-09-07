@@ -1,10 +1,10 @@
 <?php
 
-    $swap_times = 959595; //set how many times you want to swap; 
+    $swap_times = 959595;//set how many times you want to swap; 
     $cards = array();
 
     //init cards
-    for ($i = 0; $i < 52; $i++) { 
+    for ($i = 0; $i < 52; $i++) {
         array_push($cards, $i);
     }
 
@@ -13,7 +13,7 @@
     show_card($cards);
 
     //shuffle cards set
-    for ($i = 0; $i < $swap_times; $i++) { 
+    for ($i = 0; $i < $swap_times; $i++) {
         $time = (int)time();
         swap_card($cards, base_convert($time * $i, 10, 8) % 52, $time * $i % 52);
     }
@@ -24,7 +24,7 @@
 
     //convert to cards graph by numbers
     function show_card($cards) {
-        for ($i = 0; $i < 52; $i++) { 
+        for ($i = 0; $i < 52; $i++) {
             switch ($cards[$i] % 13 + 1) {
                 case 1:
                     echo str_pad("A", 2, ' ', STR_PAD_LEFT);
